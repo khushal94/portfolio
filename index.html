@@ -1,206 +1,633 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Portfolio - Khushal Yadav</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khushal's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+            overflow-x: hidden;
+            animation: fadeIn 1s ease-in;
+        } */
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+    width: 100%; /* Ensures full width */
+    min-width: 100vw; /* Forces full viewport width on mobile */
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    animation: fadeIn 1s ease-in;
+}
 
 
-	</head>
-	<body class="is-preload">
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+            to {
+                opacity: 1;
+            }
+        }
 
-				<!-- Wrapper -->
-					<div id="wrapper">
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-						<!-- Panel (Banner) -->
-							<section class="panel banner right">
-								<div class="content color0 span-3-75">
-									<h1 class="major">Hello, my name<br />
-									is Khushal</h1>
-									<p>I’m a passionate Full Stack Developer with expertise in modern web technologies, including Node.js (Express.js, Sails.js, NestJS), React, Angular, Laravel, MySQL, and MongoDB. I have experience working on both microservices and monolithic architectures, ensuring scalable and efficient solutions tailored to your unique needs.
+        /* Header and Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 15, 15, 0.95);
+            backdrop-filter: blur(15px);
+            z-index: 100;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
 
-										With a strong commitment to quality, I prioritize timely delivery and align with your budget. You can trust me to bring your vision to life and help your business grow with reliable, high-performance applications. :)</p>
-									<ul class="actions">
-										<li><a href="#first" class="button primary color1 circle icon solid fa-angle-right">Next</a></li>
-									</ul>
-								</div>
-								<div class="image filtered span-1-75" data-position="25% 25%">
-									<img src="images/bg4.jpg" alt="" />
-								</div>
-							</section>
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
-						<!-- Panel (Spotlight) -->
-							<section class="panel spotlight medium right" id="first">
-								<div class="content span-7">
-									<h2 class="major">Services I Offer</h2>
-									<p>I can help you by developing custom products, providing ready-made solutions as per your requirements, or handling maintenance work for your existing applications. You can trust my work for its quality, reliability, and timely delivery, all within your budget.</p>
-								</div>
-								<div class="image filtered tinted" data-position="top left">
-									<img src="images/bg.avif" alt="" />
-								</div>
-							</section>
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #00d4ff;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
 
-						<!-- Panel -->
-							<section class="panel color1">
-								<div class="intro joined">
-									<h2 class="major">Tech Stack I Specialize In</h2>
-									<ul>
-										<li><strong>Node.js:</strong> Backend with Express.js, Sails.js, and NestJS.</li>
-										<li><strong>Angular:</strong> Dynamic web applications.</li>
-										<li><strong>Ionic:</strong> Cross-platform mobile apps.</li>
-										<li><strong>React:</strong> Interactive front-end interfaces.</li>
-										<li><strong>PHP:</strong> Robust server-side solutions.</li>
-										<li><strong>AWS & GCP:</strong> Scalable cloud deployments.</li>
-									  </ul>
-								</div>
-								<div class="inner">
-									<ul class="grid-icons three connected">
-										<li><span class="icon fa-gem"><span class="label">Lorem</span></span></li>
-										<li><span class="icon solid fa-camera-retro"><span class="label">Ipsum</span></span></li>
-										<li><span class="icon solid fa-cog"><span class="label">Dolor</span></span></li>
-										<li><span class="icon solid fa-leaf"><span class="label">Sit</span></span></li>
-										<li><span class="icon solid fa-chart-bar"><span class="label">Amet</span></span></li>
-										<li><span class="icon solid fa-code"><span class="label">Nullam</span></span></li>
-									</ul>
-								</div>
-							</section>
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
 
-						<!-- Panel (Spotlight) -->
-							<section class="panel spotlight large left">
-								<div class="content span-5">
-									<h2 class="major">Trending Categories that I've Worked on:</h2>
-									<ul>
-										<li><strong>E-commerce:</strong> Custom and ready-made solutions for online stores.</li>
-										<li><strong>Mobile Apps:</strong> Utility, video consultation, astrology, and streaming apps.</li>
-										<li><strong>CMS:</strong> Content management systems for seamless website management.</li>
-										<li><strong>ERP:</strong> Tailored ERP solutions for startups and established companies.</li>
-										<li><strong>Business Websites:</strong> Introductory websites with NFC card features.</li>
-									  </ul>
-								</div>
-								<div class="image filtered tinted" data-position="top right">
-									<img src="images/971.jpg" alt="" />
-								</div>
-							</section>
+        nav ul li {
+            margin-left: 2rem;
+        }
 
-						<!-- Panel -->
-							<section class="panel">
-								<div class="intro color2">
-									<h2 class="major">Previous Projects</h2>
-									<p>I have successfully delivered a range of projects, from custom web and mobile apps to cloud solutions, each tailored to meet client needs with high-quality results. Explore some of my past work below.</p>
-								</div>
-								<div class="gallery">
-									<div class="group span-3">
-										<a href="images/portfolio/astroyours.png" class="image filtered span-3" data-position="bottom"><img src="images/portfolio/astroyours.png" alt="" /></a>
-										<a href="images/portfolio/astroyours2.png" class="image filtered span-1-5" data-position="center"><img src="images/portfolio/astroyours2.png" alt="" /></a>
-										<a href="images/portfolio/inno.png" class="image filtered span-1-5" data-position="bottom"><img src="images/portfolio/inno.png" alt="" /></a>
-									</div>
-									<a href="images/portfolio/tv.webp" class="image filtered span-2-5" data-position="top"><img src="images/portfolio/tv.webp" alt="" /></a>
-									<div class="group span-4-5">
-										<a href="images/portfolio/foundation.png" class="image filtered span-3" data-position="top"><img src="images/portfolio/foundation.png" alt="" /></a>
-										<a href="images/portfolio/hoohaz.png" class="image filtered span-1-5" data-position="center"><img src="images/portfolio/hoohaz.png" alt="" /></a>
-										<a href="images/portfolio/hotel.png" class="image filtered span-1-5" data-position="bottom"><img src="images/portfolio/hotel.png" alt="" /></a>
-										<a href="images/portfolio/swit.png" class="image filtered span-3" data-position="top"><img src="images/portfolio/swit.png" alt="" /></a>
-									</div>
-									<a href="images/portfolio/daily.jpeg" class="image filtered span-2-5" data-position="right"><img src="images/portfolio/daily.jpeg" alt="" /></a>
-								</div>
-							</section>
+        nav ul li a {
+            transition: color 0.3s, transform 0.3s;
+        }
 
-						<!-- Panel -->
-							<section class="panel color4-alt">
-								<div class="intro color4">
-									<h2 class="major">Contact</h2>
-									<p>Looking for software solutions? Contact me for all your software development needs. Let's turn your ideas into reality!</p>
-									<p> 
-										<a href="tel:+919785558507">Call or Whatsapp :<br> +91 978-555-8507 </a><br><br>
-										<a href="mailto:khushal.yadav@outlook.com">Email : <br>khushal.yadav@outlook.com</a>
-									</p>
-								</div>
-								<div class="inner columns divided">
-									<div class="span-3-25">
-										<form id="contactForm" onsubmit="sendEmail(event)">
-											<div class="fields">
-												<div class="field half">
-													<label for="name">Name</label>
-													<input type="text" name="name" id="name" />
-												</div>
-												<div class="field half">
-													<label for="email">Email</label>
-													<input type="email" name="email" id="email" />
-												</div>
-												<div class="field">
-													<label for="message">Message</label>
-													<textarea name="message" id="message" rows="4"></textarea>
-												</div>
-											</div>
-											<ul class="actions">
-												<li><input type="submit" value="Send Message" class="button primary" /></li>
-											</ul>
-										</form>
-									</div>
-									<!-- <div class="span-1-5">
-										<ul class="contact-icons color1">
-											<li class="icon brands fa-twitter"><a href="#">@untitled-tld</a></li>
-											<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled</a></li>
-											<li class="icon brands fa-snapchat-ghost"><a href="#">@untitled-tld</a></li>
-											<li class="icon brands fa-instagram"><a href="#">@untitled-tld</a></li>
-											<li class="icon brands fa-medium-m"><a href="#">medium.com/untitled</a></li>
-										</ul>
-									</div> -->
-								</div>
-							</section>
+        nav ul li a:hover {
+            color: #00d4ff;
+            transform: translateY(-2px);
+        }
 
-						<!-- Panel -->
-							<section class="panel color2-alt">
-								<div class="intro color2">
-									<h2 class="major">Thanks!</h2>
-									<p>Thank you for visiting! If you have any questions, need assistance, or want to discuss your requirements, feel free to get in touch. I'm here to help!</p>
-								</div>
-								
-							</section>
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #2a2a2a 100%); */
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
 
-					
-					</div>
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('./banner.png') no-repeat center/cover;
+            opacity: 0.7;
+            z-index: -1;
+        }
 
-			</div>
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/main.js"></script>
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(45deg, #00d4ff, #0099cc);
+            color: #121212;
+            border-radius: 25px;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background: linear-gradient(45deg, #0099cc, #00d4ff);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+        }
+
+        .btn.secondary {
+            background: transparent;
+            border: 2px solid #00d4ff;
+            color: #00d4ff;
+        }
+
+        .btn.secondary:hover {
+            background: #00d4ff;
+            color: #121212;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            animation: slideUp 1s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #00d4ff;
+            margin: 0.5rem auto;
+        }
+
+        .container {
+            padding: 0 2rem;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #00d4ff;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .skills {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .skills li {
+            background: linear-gradient(45deg, #00d4ff, #0099cc);
+            color: #121212;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s;
+        }
+
+        .skills li:hover {
+            transform: scale(1.05);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 212, 255, 0.2);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-card h3 {
+            padding: 1rem;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+
+        .project-card p {
+            padding: 0 1rem;
+            color: #ccc;
+        }
+
+        .tech-stack {
+            padding: 0 1rem;
+            font-size: 0.9rem;
+            color: #00d4ff;
+            font-weight: 600;
+        }
+
+        .project-card .btn {
+            margin: 1rem;
+            font-size: 0.9rem;
+        }
+
+        /* Contact Buttons */
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            /* For mobile responsiveness */
+        }
 
 
-			<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-			<script>
-			
-				emailjs.init("TcfmYqlhWhIHy92aP"); 
-			
-				function sendEmail(event) {
-				//   event.preventDefault();
-			
-				  // Collect form data
-				  const formData = {
-					name: document.getElementById("name").value,
-					email: document.getElementById("email").value,
-					message: document.getElementById("message").value,
-				  };
-			
-				  // Send email using EmailJS
-				  emailjs.send("service_ecfaobq", "template_z6ykhao", formData)
-					.then(() => {
-					  alert("Email sent successfully!");
-					})
-					.catch((error) => {
-					  alert("Failed to send email. Error: " + error.text);
-					});
-				}
-			  </script>
 
-	</body>
+/* Floating Tech Logos */
+.floating-logos {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicking through */
+    z-index: -1; /* Behind content */
+}
+
+.floating-logo {
+    position: absolute;
+    width: 80px; /* Increased from 50px */
+    height: 80px; /* Increased from 50px */
+    object-fit: contain;
+    opacity: 0.9;
+    filter: grayscale(0.5);
+    animation: float-vertical 4s ease-in-out infinite;
+    transition: opacity 0.3s, filter 0.3s;
+    font-size: 80px;
+}
+
+.floating-logo:hover {
+    opacity: 1;
+    filter: grayscale(0);
+    animation-play-state: paused;
+}
+
+/* Left Side Positioning (8 logos) */
+.floating-logo.left:nth-child(1) { left: 5%; top: 10%; }
+.floating-logo.left:nth-child(2) { left: 10%; top: 25%; }
+.floating-logo.left:nth-child(3) { left: 5%; top: 40%; }
+.floating-logo.left:nth-child(4) { left: 10%; top: 55%; }
+.floating-logo.left:nth-child(5) { left: 5%; top: 70%; }
+.floating-logo.left:nth-child(6) { left: 10%; top: 85%; }
+.floating-logo.left:nth-child(7) { left: 5%; top: 100%; }
+.floating-logo.left:nth-child(8) { left: 10%; top: 115%; }
+
+/* Right Side Positioning (8 logos) */
+.floating-logo.right:nth-child(9) { right: 5%; top: 15%; }
+.floating-logo.right:nth-child(10) { right: 10%; top: 30%; }
+.floating-logo.right:nth-child(11) { right: 5%; top: 45%; }
+.floating-logo.right:nth-child(12) { right: 10%; top: 60%; }
+.floating-logo.right:nth-child(13) { right: 5%; top: 75%; }
+.floating-logo.right:nth-child(14) { right: 10%; top: 90%; }
+.floating-logo.right:nth-child(15) { right: 5%; top: 105%; }
+.floating-logo.right:nth-child(16) { right: 10%; top: 120%; }
+
+/* Staggered Animations */
+.animate-1 { animation-delay: 0s; }
+.animate-2 { animation-delay: 1s; }
+.animate-3 { animation-delay: 2s; }
+.animate-4 { animation-delay: 3s; }
+
+@keyframes float-vertical {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); } /* Adjust -20px for movement distance */
+}
+
+/* Responsive for Floating Logos */
+@media (max-width: 768px) {
+    .floating-logo {
+        width: 20px; /* Increased from 40px */
+        height: 20px; /* Increased from 40px */
+        opacity: 0.9; /* Less prominent on mobile */
+        font-size: 20px;
+    }
+    .floating-logo.left:nth-child(n+5), .floating-logo.right:nth-child(n+13) {
+        display: none; /* Hide some on small screens to reduce clutter */
+    }
+
+    body{
+        width: 134vw;
+    }
+
+    .about-grid{
+        display: inline;
+    }
+
+    section {
+    padding: 2rem 0rem;
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+
+
+      <div class="floating-logos">
+        <!-- Left Side -->
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="floating-logo left animate-1">
+        <i class="fab fa-js fa-2x floating-logo left animate-2" style="color: #f7df1e;"></i>
+        <i class="fab fa-node-js fa-2x floating-logo left animate-3" style="color: #68a063;"></i>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel" class="floating-logo left animate-4">
+        <i class="fab fa-react fa-2x floating-logo left animate-1" style="color: #61dafb;"></i>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-plain.svg" alt="PHP" class="floating-logo left animate-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="floating-logo left animate-3">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="floating-logo left animate-4">
+        <!-- Right Side -->
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="floating-logo right animate-1">
+        <i class="fab fa-git fa-2x floating-logo right animate-2" style="color: #f05032;"></i>
+        <i class="fab fa-html5 fa-2x floating-logo right animate-3" style="color: #e34f26;"></i>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" class="floating-logo right animate-4">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" class="floating-logo right animate-1">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain.svg" alt="Docker" class="floating-logo right animate-2">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" class="floating-logo right animate-3">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" alt="TypeScript" class="floating-logo right animate-4">
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo"><i class="fas fa-code"></i> Khushal</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Khushal</h1>
+            <p>
+                Full-Stack Developer <br> Node.js, Python, Laravel, React, Angular <br>
+
+            </p>
+            <a href="#projects" class="btn"><i class="fas fa-arrow-down"></i> View My Work</a>
+        </div>
+        <div class="hero-bg"></div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <img src="./profile.webp" alt="Khushal's photo" class="profile-img">
+                <div>
+                    <p>I’m a Full-Stack Developer with 9+ years of experience building scalable digital products for
+                        startups and growing businesses. I have strong hands-on expertise in developing web and mobile
+                        applications, LMS platforms, ERP systems, POS solutions, and custom business software using
+                        modern technologies like Laravel, Node.js, Python, React, and React Native. I specialize in
+                        startup product development, helping ideas move from concept to production with clean
+                        architecture, high performance, and a user-focused design approach.</p>
+                    <ul class="skills">
+                        <li><i class="fab fa-html5"></i> HTML5 / CSS3</li>
+                        <li><i class="fab fa-js"></i> JavaScript</li>
+                        <li><i class="fab fa-react"></i> React</li>
+                        <li><i class="fab fa-node"></i> Node.js</li>
+                        <li><i class="fab fa-laravel"></i> Laravel</li>
+                        <li><i class="fab fa-python"></i> Python</li>
+                        <li><i class="fab fa-react"></i> React Native</li>
+                        <li><i class="fas fa-database"></i> MySQL</li>
+                        <li><i class="fas fa-database"></i> MongoDB</li>
+                        <li><i class="fab fa-aws"></i> AWS</li>
+                        <li><i class="fab fa-git"></i> Git & GitHub</li>
+                        <li><i class="fas fa-server"></i> REST APIs</li>
+                        <li><i class="fas fa-cloud"></i> Firebase</li>
+                        <li><i class="fas fa-code"></i> API Integrations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+
+            <div class="projects-grid">
+
+                <!-- Swit -->
+                <div class="project-card">
+                    <img src="./swit.PNG" alt="Swit.io">
+                    <h3>Swit.io – Team Collaboration Platform</h3>
+                    <p>
+                        An all-in-one workspace for team chat, task management, and real-time collaboration.
+                        I worked on UI components, real-time features, and performance optimization for smoother
+                        workflows.
+                    </p>
+                    <div class="tech-stack">Node.js, WebSockets</div>
+                    <a href="https://www.swit.io/" class="btn" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Visit Platform
+                    </a>
+                </div>
+
+                <!-- InnoFulfill -->
+                <div class="project-card">
+                    <img src="./inno.PNG" alt="InnoFulfill">
+                    <h3>InnoFulfill – Logistics & Fulfillment System</h3>
+                    <p>
+                        A cloud-based fulfillment and warehouse management platform for e-commerce brands.
+                        I developed backend APIs for inventory, order tracking, and courier integrations.
+                    </p>
+                    <div class="tech-stack">Node.js, MongoDB, Express</div>
+                    <a href="https://innofulfill.com/" class="btn" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Visit Platform
+                    </a>
+                </div>
+
+                <!-- RightBite -->
+                <div class="project-card">
+                    <img src="./rightbite.PNG" alt="RightBite">
+                    <h3>RightBite – Nutrition & Meal Planning App</h3>
+                    <p>
+                        A health-focused mobile app that helps users track meals, calories, and nutrition goals.
+                        I built the user profiles, tracking logic, and data visualizations.
+                    </p>
+                    <div class="tech-stack">React Native, Laravel, REST APIs</div>
+                    <a href="https://rightbite.com/" class="btn" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Visit Platform
+                    </a>
+                </div>
+
+                <!-- TVSeans -->
+                <div class="project-card">
+                    <img src="./tv.PNG" alt="TVSeans App">
+                    <h3>TVSeans – Live TV & Streaming App</h3>
+                    <p>
+                        An Android streaming app providing live TV channels and on-demand entertainment.
+                        I optimized streaming performance and integrated multiple media APIs.
+                    </p>
+                    <div class="tech-stack">React Native, Laravel, REST APIs</div>
+                    <a href="https://play.google.com/store/apps/details?id=com.agnitio.tvseans" class="btn"
+                        target="_blank">
+                        <i class="fas fa-external-link-alt"></i> View on Play Store
+                    </a>
+                </div>
+
+                <!-- BeYoung -->
+                <div class="project-card">
+                    <img src="./beyoung.PNG" alt="BeYoung">
+                    <h3>BeYoung – Fashion E-Commerce Platform</h3>
+                    <p>
+                        A high-traffic fashion shopping platform with payments, order management, and customer
+                        dashboards.
+                        I contributed to frontend UI, checkout flow, and API integrations.
+                    </p>
+                    <div class="tech-stack">React, Node.js, Payment Gateways</div>
+                    <a href="https://www.beyoung.in/" class="btn" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Visit Store
+                    </a>
+                </div>
+
+                <!-- Gyanitalk -->
+                <div class="project-card">
+                    <img src="./gyani.PNG" alt="Gyanitalk">
+                    <h3>Gyanitalk – Online Learning Platform</h3>
+                    <p>
+                        A complete LMS platform with video courses, quizzes, and student dashboards.
+                        I built the course system, video streaming module, and admin analytics panel.
+                    </p>
+                    <div class="tech-stack">Nodejs, React, MySQL</div>
+                    <a href="https://gyanitalk.com/" class="btn" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Visit Platform
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <img src="./min.PNG" alt="Minneapolis Foundation">
+                    <h3>Minneapolis Foundation – Non-Profit Platform</h3>
+                    <p>
+                        A large-scale nonprofit foundation website built to showcase initiatives, manage donations,
+                        grants, and community programs. I worked on performance optimization, CMS integration,
+                        and frontend improvements for a smooth donor and visitor experience.
+                    </p>
+                    <div class="tech-stack">PHP, CMS, JavaScript, UI Optimization</div>
+                    <a href="https://www.minneapolisfoundation.org/" class="btn" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Visit Website
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <img src="./super.PNG" alt="WeGrow App">
+                    <h3>WeGrow – AI Chatbot & Smart Suggestions</h3>
+                    <p>
+                        An AI-powered mobile application featuring an intelligent chatbot and personalized
+                        recommendation system. I built the Python-based AI engine that analyzes user input
+                        and delivers smart responses, guidance, and growth suggestions in real time.
+                    </p>
+                    <div class="tech-stack">Python, AI/ML, NLP, REST APIs</div>
+                    <a href="https://play.google.com/store/apps/details?id=com.wegrow.we_grow&hl=en_IN" class="btn"
+                        target="_blank">
+                        <i class="fas fa-external-link-alt"></i> View on Play Store
+                    </a>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <div class="contact-buttons">
+                <a href="tel:+919785558507" class="btn"><i class="fas fa-phone"></i> Call Me</a>
+                <a href="mailto:khushal.yadav@outlook.com" class="btn"><i class="fas fa-envelope"></i> Email Me</a>
+                <a href="https://wa.me/919785558507" class="btn" target="_blank"><i class="fab fa-whatsapp"></i>
+                    WhatsApp</a>
+
+            </div>
+
+        </div>
+    </section>
+
+
+</body>
+
 </html>
